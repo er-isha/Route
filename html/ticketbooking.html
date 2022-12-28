@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ticket.css">
+    <title>
+        ticket booking
+    </title>
+    <style>
+        .login {
+            position: relative;
+            animation: route 3s;
+            animation-direction: normal;
+            animation-timing-function:ease-in-out;
+        }
+
+        @keyframes route {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                left: 200px;
+                top: 0px;
+            }
+        }
+    </style>
+    <script>
+        function dropdownChange() {
+            var s_s = document.getElementById("s_s").value;
+            var d_s = document.getElementById("d_s").value;
+
+            if (s_s == d_s) {
+                alert("Both station can not be same");
+            }
+        }
+    </script>
+</head>
+
+<body align="center">
+    <div class="header">
+        <div class="icon"></div>
+        <div class="links">
+            <div class="linkwrapper">
+                <a href="../index.html">HOME</a>
+
+                <span class="seperator">
+                    <a href="../html/login.html">LOGIN</a>
+                </span>
+
+                <span class="seperator">
+                    <a href="../html/ticketbooking.html">TICKET BOOKING</a>
+                </span>
+
+                <span class="seperator">
+                    <a href="../html/map.html">MAP</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="image">
+            <div class="login">
+                <center>
+                    <form class="form">
+                        <div class="src">
+                            <lable>Source station</lable><br>
+                            <select class="dd" name="s_s" id="s_s" onchange="dropdownChange();">
+                                <option value="0">Select station</option>
+                                <option value="1">A.E.C(sabarmati)</option>
+                                <option value="2">A.P.M.C</option>
+                                <option value="3">AMRAIVADI</option>
+                                <option value="4">APPAREL PARK</option>
+                                <option value="5">COMMERCE SIX ROAD</option>
+                                <option value="6">DOORDARSHAN KENDRA</option>
+                                <option value="7">GANDHIGRAM</option>
+                                <option value="8">GHEE KANTA</option>
+                                <option value="9">GUJARAT UNIVERSITY</option>
+                                <option value="10">GURUKUL ROAD</option>
+                                <option value="11">JIVRAJ</option>
+                                <option value="12">KALUPUR RAILWAY STATION</option>
+                                <option value="13">KANKARIA STATION</option>
+                                <option value="14">MOTERA STADIUM</option>
+                                <option value="15">THALTEJ</option>
+                            </select>
+                        </div>
+                        <br></br>
+                        <div class="desti">
+                            <lable>Destination station</lable><br>
+                            <select class="dd" name="d_s" id="d_s" onchange="dropdownChange();">
+                                <option value="0">Select station</option>
+                                <option value="1">A.E.C(sabarmati)</option>
+                                <option value="2">A.P.M.C</option>
+                                <option value="3">AMRAIVADI</option>
+                                <option value="4">APPAREL PARK</option>
+                                <option value="5">COMMERCE SIX ROAD</option>
+                                <option value="6">DOORDARSHAN KENDRA</option>
+                                <option value="7">GANDHIGRAM</option>
+                                <option value="8">GHEE KANTA</option>
+                                <option value="9">GUJARAT UNIVERSITY</option>
+                                <option value="10">GURUKUL ROAD</option>
+                                <option value="11">JIVRAJ</option>
+                                <option value="12">KALUPUR RAILWAY STATION</option>
+                                <option value="13">KANKARIA STATION</option>
+                                <option value="14">MOTERA STADIUM</option>
+                                <option value="15">THALTEJ</option>
+                            </select>
+                        </div>
+                        <br></br>
+
+                        <button class="but">Book Ticket</button>
+                    </form>
+                </center>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
