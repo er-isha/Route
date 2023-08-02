@@ -82,3 +82,46 @@
     background-color:rgba(11, 11, 11, 0.861);
     color:white;
   }
+
+  .myform{
+    padding-top: 20%;
+    margin-left:5px;
+    margin-top: 20px;
+    height:300px;
+    width:400px;
+    border-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.549);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.142);
+    justify-content: space-evenly;
+  }
+
+  .payment{
+    margin-left:20px;
+    height:270px;
+    width:400px;
+    border-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.549);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.142);
+    justify-content: space-evenly;
+  }
+
+  table{
+    width: 100%;
+  }
+
+  .pay label{
+    align-items: flex-start;
+  }
+
+   button{
+    width: 170px;
+    width: 40p;
+    font-weight: 600;
+  }
+  
