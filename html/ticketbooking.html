@@ -14,19 +14,7 @@
             position: relative;
             animation: route 3s;
             animation-direction: normal;
-            animation-timing-function:ease-in-out;
-        }
-
-        @keyframes route {
-            0% {
-                left: 0px;
-                top: 0px;
-            }
-
-            25% {
-                left: 200px;
-                top: 0px;
-            }
+            animation-timing-function: ease-in-out;
         }
     </style>
     <script>
@@ -39,9 +27,10 @@
             }
         }
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
 
-<body align="center">
+<body align="center" ng-app="">
     <div class="header">
         <div class="icon"></div>
         <div class="links">
@@ -49,7 +38,7 @@
                 <a href="../index.html">HOME</a>
 
                 <span class="seperator">
-                    <a href="../html/login.html">LOGIN</a>
+                    <a href="../html/login.php">LOGIN</a>
                 </span>
 
                 <span class="seperator">
@@ -59,65 +48,126 @@
                 <span class="seperator">
                     <a href="../html/map.html">MAP</a>
                 </span>
+
+                <span class="separator">
+                    <a href="../html/all.html">ATTRACTION</a>
+                </span>
             </div>
         </div>
     </div>
     <div>
         <div class="image">
             <div class="login">
-                <center>
-                    <form class="form">
-                        <div class="src">
-                            <lable>Source station</lable><br>
-                            <select class="dd" name="s_s" id="s_s" onchange="dropdownChange();">
-                                <option value="0">Select station</option>
-                                <option value="1">A.E.C(sabarmati)</option>
-                                <option value="2">A.P.M.C</option>
-                                <option value="3">AMRAIVADI</option>
-                                <option value="4">APPAREL PARK</option>
-                                <option value="5">COMMERCE SIX ROAD</option>
-                                <option value="6">DOORDARSHAN KENDRA</option>
-                                <option value="7">GANDHIGRAM</option>
-                                <option value="8">GHEE KANTA</option>
-                                <option value="9">GUJARAT UNIVERSITY</option>
-                                <option value="10">GURUKUL ROAD</option>
-                                <option value="11">JIVRAJ</option>
-                                <option value="12">KALUPUR RAILWAY STATION</option>
-                                <option value="13">KANKARIA STATION</option>
-                                <option value="14">MOTERA STADIUM</option>
-                                <option value="15">THALTEJ</option>
-                            </select>
-                        </div>
-                        <br></br>
-                        <div class="desti">
-                            <lable>Destination station</lable><br>
-                            <select class="dd" name="d_s" id="d_s" onchange="dropdownChange();">
-                                <option value="0">Select station</option>
-                                <option value="1">A.E.C(sabarmati)</option>
-                                <option value="2">A.P.M.C</option>
-                                <option value="3">AMRAIVADI</option>
-                                <option value="4">APPAREL PARK</option>
-                                <option value="5">COMMERCE SIX ROAD</option>
-                                <option value="6">DOORDARSHAN KENDRA</option>
-                                <option value="7">GANDHIGRAM</option>
-                                <option value="8">GHEE KANTA</option>
-                                <option value="9">GUJARAT UNIVERSITY</option>
-                                <option value="10">GURUKUL ROAD</option>
-                                <option value="11">JIVRAJ</option>
-                                <option value="12">KALUPUR RAILWAY STATION</option>
-                                <option value="13">KANKARIA STATION</option>
-                                <option value="14">MOTERA STADIUM</option>
-                                <option value="15">THALTEJ</option>
-                            </select>
-                        </div>
-                        <br></br>
+                <table>
+                    <tr>
+                        <td>
+                        <td>
+                            <form class="form">
+                                <div class="src">
+                                    <lable><b>Source station</b></lable><br>
+                                    <select class="dd" name="s_s" id="s_s" onchange="dropdownChange();">
+                                        <option value="0">Select station</option>
+                                        <option value="A.E.C(sabarmati)">A.E.C(sabarmati)</option>
+                                        <option value="A.P.M.C">A.P.M.C</option>
+                                        <option value="AMRAIVADI">AMRAIVADI</option>
+                                        <option value="APPAREL PARK">APPAREL PARK</option>
+                                        <option value="COMMERCE SIX ROAD">COMMERCE SIX ROAD</option>
+                                        <option value="DOORDARSHAN KENDRA">DOORDARSHAN KENDRA</option>
+                                        <option value="GANDHIGRAM">GANDHIGRAM</option>
+                                        <option value="GHEE KANTA">GHEE KANTA</option>
+                                        <option value="GUJARAT UNIVERSITY">GUJARAT UNIVERSITY</option>
+                                        <option value="GURUKUL ROAD">GURUKUL ROAD</option>
+                                        <option value="JIVRAJ">JIVRAJ</option>
+                                        <option value="KALUPUR RAILWAY STATION">KALUPUR RAILWAY STATION</option>
+                                        <option value="KANKARIA STATION">KANKARIA STATION</option>
+                                        <option value="MOTERA STADIUM">MOTERA STADIUM</option>
+                                        <option value="THALTEJ">THALTEJ</option>
+                                    </select>
+                                </div>
+                                <br></br>
+                                <div class="desti">
+                                    <lable><b>Destination station</b></lable><br>
+                                    <select class="dd" name="d_s" id="d_s" onchange="dropdownChange();">
+                                        <option value="0">Select station</option>
+                                        <option value="A.E.C(sabarmati)">A.E.C(sabarmati)</option>
+                                        <option value="A.P.M.C">A.P.M.C</option>
+                                        <option value="AMRAIVADI">AMRAIVADI</option>
+                                        <option value="APPAREL PARK">APPAREL PARK</option>
+                                        <option value="COMMERCE SIX ROAD">COMMERCE SIX ROAD</option>
+                                        <option value="DOORDARSHAN KENDRA">DOORDARSHAN KENDRA</option>
+                                        <option value="GANDHIGRAM">GANDHIGRAM</option>
+                                        <option value="GHEE KANTA">GHEE KANTA</option>
+                                        <option value="GUJARAT UNIVERSITY">GUJARAT UNIVERSITY</option>
+                                        <option value="GURUKUL ROAD">GURUKUL ROAD</option>
+                                        <option value="JIVRAJ">JIVRAJ</option>
+                                        <option value="KALUPUR RAILWAY STATION">KALUPUR RAILWAY STATION</option>
+                                        <option value="KANKARIA STATION">KANKARIA STATION</option>
+                                        <option value="MOTERA STADIUM">MOTERA STADIUM</option>
+                                        <option value="THALTEJ">THALTEJ</option>
+                                    </select>
+                                </div>
+                                <br></br>
+                                <div><b>Passenger:</b></div>
+                                <div><input type="number"  style="height: 30px;width: 200px ;" placeholder="Enter the number of passanger" min="1" max="10"></div>
 
-                        <button class="but">Book Ticket</button>
-                    </form>
-                </center>
+                            </form>
+                        </td>
             </div>
         </div>
     </div>
+
+
+    <td>
+
+        <form class="myform">
+            <h2>Choose payment method</h2><br><br>
+            <input type="radio" value="deb" ng-model="myVar"><b>Debit Card/Credit Card</b><br><br>
+            <input type="radio" value="upi" ng-model="myVar"><b>UPI</b><br>
+        </form>
+    </td>
+
+    <td class="payment">
+        <div ng-switch="myVar">
+            <div ng-switch-when="deb">
+                <div class="pay">
+                <label>Enter card number:</label>
+                <input type="text"><br>
+
+                <label>Enter CVV:</label>
+                <input type="text" ><br>
+
+                <label>Expire Date:</label>
+                <input type="text" placeholder="month/year"><br><br>
+
+                <button onclick="qrGen()">PAY</button><br><br>
+                </div>
+            </div>
+            <div ng-switch-when="upi">
+                <label>Enter UPI-ID </label>
+                <input type="text"><br><br>
+
+                <button onclick="qrGen()">PAY</button><br><br>
+            </div>
+        </div>
+        <div class="container">
+            <div id="imgBox">
+                <img src="" id="qrImg">
+            </div>
+        </div>
+
+        <script>
+
+            let imgBox = document.getElementById("imgBox");
+            let qrImg = document.getElementById("qrImg");
+            let s_s = document.getElementById("s_s");
+
+            function qrGen() {
+                qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + s_s.value + " to " + d_s.value;
+            }
+        </script>
+    </td>
+    </tr>
+    </table>
 </body>
 
 </html>
